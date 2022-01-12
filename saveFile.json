@@ -1,0 +1,24 @@
+{
+    "layers": [
+        {
+            "type": "frame",
+            "path": "http://lab.greedygame.com/arpit-dev/unity-asignment/assets/wcc2_f2.png",
+            "placement": [
+                {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 650,
+                        "height": 230
+                    }
+                }
+            ],
+            "operations": [
+                {
+                    "name": "color",
+                    "argument": "#77FF0000"
+                }
+            ]
+        }
+    ]
+}

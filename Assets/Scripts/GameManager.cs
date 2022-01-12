@@ -12,7 +12,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using Newtonsoft.Json.Converters;
 using UnityEngine.Networking;
-
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -77,12 +77,18 @@ public class GameManager : MonoBehaviour
         if(request.isNetworkError || request.isHttpError)
         {
             Debug.Log(request.error);
+            ErrorLogged();
         }
         else
         {
             Sprite sprite = Sprite.Create(((DownloadHandlerTexture)request.downloadHandler).texture, new Rect(x, y, width, height), new Vector2(width/2, height/2));
             panel.GetComponent<Image>().overrideSprite = sprite;
         }
+    }
+
+    public void ErrorLogged()
+    {
+        SceneManager.LoadScene("ErrorScene");
     }
 
 }
